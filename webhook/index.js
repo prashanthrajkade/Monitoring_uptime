@@ -4,10 +4,9 @@ const { Twilio } = require('twilio');
 const app = express();
 app.use(express.json());
 
-const accountSid = 'AC2d6480a17754fe14827203ff8c5320f4';
-const authToken = 'cf897379841e3c4392ebe92daa3fca18';
-const twilioNumber = '+15017122661'; 
-
+  const accountSid = '<YOUR_TWILIO_ACCOUNT_SID>';
+    const authToken = '<YOUR_TWILIO_AUTH_TOKEN>';
+    const client = new Twilio(accountSid, authToken);
 const client = new Twilio(accountSid, authToken);
 
 app.post('/trigger-calls', async (req, res) => {
